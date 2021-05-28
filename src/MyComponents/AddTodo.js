@@ -11,7 +11,11 @@ export default function AddTodo(props) {
         if(!title || !desc){
             alert("Task or Description cannot be NULL...")
         }
-        props.addTodo(title, desc) ;
+        else{
+            props.addTodo(title, desc) ;
+            setTitle("");
+            setDesc("");
+        }
     }
 
     return (
