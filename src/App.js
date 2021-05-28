@@ -3,7 +3,7 @@ import Header from"./MyComponents/Header";
 import Footer from"./MyComponents/Footer";
 import Todos from"./MyComponents/Todos";
 import AddTodo from"./MyComponents/AddTodo";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
 
@@ -47,12 +47,15 @@ function App() {
     } 
     setTodos([...todos, myTodo]);
     console.log(myTodo) ;
-
-    localStorage.setItem("todos", JSON.stringify(todos));
-    
   }
 
   const [todos, setTodos] = useState(initTodo);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    
+  }, [todos])                                                       //whenever todos gets changed use this method
+  
 
   return (
     <div className="app">
