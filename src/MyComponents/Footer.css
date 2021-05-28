@@ -1,0 +1,8 @@
+Footer{
+
+    width: 100%;
+    top: 29.2vh;
+    position: relative; 
+    background-color: tomato;
+    border: 2px solid black;
+}
