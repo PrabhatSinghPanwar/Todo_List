@@ -7,6 +7,15 @@ import React, { useState } from 'react';
 
 function App() {
 
+  let initTodo;
+
+  if(localStorage.getItem("todos")===null){
+    initTodo = [];
+  }
+  else{
+    initTodo = JSON.parse(localStorage.getItem("todos"));
+  }
+
   const onDelete = (todo) => {
     console.log("I AM ON DELETE... of todo", todo)
     //deleting this way does not works
@@ -16,7 +25,7 @@ function App() {
     setTodos(todos.filter((e)=>{
       return e!==todo;
     }));
-    localStorage.getItem("todos");  
+    localStorage.setItem("todos", JSON.stringify(todos)); 
   }
 
   const addTodo = (title, desc) => {
@@ -38,9 +47,12 @@ function App() {
     } 
     setTodos([...todos, myTodo]);
     console.log(myTodo) ;
+
+    localStorage.setItem("todos", JSON.stringify(todos));
+    
   }
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(initTodo);
 
   return (
     <div className="app">
