@@ -16,16 +16,21 @@ function App() {
     setTodos(todos.filter((e)=>{
       return e!==todo;
     }));
-
+    localStorage.getItem("todos");  
   }
 
   const addTodo = (title, desc) => {
     console.log("adding the todo", title, desc);
 
     let len = todos.length;
+    let sno;
 
     if(len!==0) {
-    let sno = todos[todos.length-1].sno+1
+      sno = todos[todos.length-1].sno+1
+    }
+    else {
+      sno = 0 ;
+    } 
     const myTodo = {
       sno: sno,
       title: title,
@@ -33,17 +38,6 @@ function App() {
     } 
     setTodos([...todos, myTodo]);
     console.log(myTodo) ;
-    }
-    else {
-      let sno = 0 ;
-      const myTodo = {
-        sno: sno,
-        title: title,
-        desc: desc,
-      } 
-      setTodos([...todos, myTodo]);
-      console.log(myTodo) ;
-    } 
   }
 
   const [todos, setTodos] = useState([]);
