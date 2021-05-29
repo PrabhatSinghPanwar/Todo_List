@@ -62,7 +62,7 @@ function App() {
     <div className="app">
       <Router>
 
-        <Header title="My ToDo List" SearchBar={true} />
+        <Header title="MyToDoList" SearchBar={true} />
 
         <Switch>
           <Route exact path="/" render = {() => {

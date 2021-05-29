@@ -30,7 +30,7 @@ export default function AddTodo(props) {
                     <label htmlFor="desc" className="form-label">Description</label>
                     <input type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}} className="form-control" id="desc" placeholder="Complete the remaining project" />
                 </div>
-                        <button type="submit" className="btn btn-sm btn-success">ADD</button>
+                        <button type="submit" className="btn btn-lg btn-success">ADD</button>
             </form>
         </div>
     )
