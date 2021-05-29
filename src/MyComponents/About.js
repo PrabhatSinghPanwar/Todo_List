@@ -5,12 +5,12 @@ export default function About() {
         <div className="about">
 
             this is about
-            <p>
-                <pre>
+            <pre>
+                <p>
                 this is just a trial for about compenet so just sit and check weather it is 
                 so observe and this this component.
-                </pre>
-            </p>
+                </p>
+            </pre>
         </div>
     )
 }

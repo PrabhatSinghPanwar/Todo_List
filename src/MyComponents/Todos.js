@@ -10,10 +10,9 @@ export default function Todos( props ) {                    //ans object props i
 
             { props.todos.length===0 ? "There is nothing to do in the list..." :
             props.todos.map((todo)=>{
-                return ( <>
+                return ( 
                 < TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
-                <hr/>
-                </> );       //must send a unique key
+                );       //must send a unique key
             })
             } 
             
