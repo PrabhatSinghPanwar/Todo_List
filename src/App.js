@@ -19,7 +19,7 @@ function App() {
   }
 
   const onDelete = (todo) => {
-    console.log("I AM ON DELETE... of todo", todo)
+
     //deleting this way does not works
     //let index = todos.indexOf(todo);
     //todos.splice(indes, 1);
@@ -31,7 +31,7 @@ function App() {
   }
 
   const addTodo = (title, desc) => {
-    console.log("adding the todo", title, desc);
+
 
     let len = todos.length;
     let sno;
@@ -48,7 +48,6 @@ function App() {
       desc: desc,
     } 
     setTodos([...todos, myTodo]);
-    console.log(myTodo) ;
   }
 
   const [todos, setTodos] = useState(initTodo);
