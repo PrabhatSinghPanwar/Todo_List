@@ -18,9 +18,15 @@ export default function AddTodo(props) {
         }
     }
 
+    // style component
+    const atsk={
+        fontFamily: "Ubuntu",
+        fontWeight: 'bold'
+    }
+
     return (
-        <div className="container my-3">
-            <h3>ADD A TASK</h3>
+        <div className="container mt-5">
+            <h3 style={atsk}>ADD A TASK</h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Task</label>
@@ -30,7 +36,7 @@ export default function AddTodo(props) {
                     <label htmlFor="desc" className="form-label">Description</label>
                     <input type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}} className="form-control" id="desc" placeholder="Complete the remaining project" />
                 </div>
-                        <button type="submit" className="btn btn-lg btn-success"><i class="fas fa-plus-circle"></i>ADD</button>
+                        <button type="submit" className="btn btn-lg btn-success mb-3"><i className="fas fa-plus-circle"></i>ADD</button>
             </form>
         </div>
     )

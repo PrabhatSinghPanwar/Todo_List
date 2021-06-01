@@ -4,27 +4,41 @@ import { Link } from "react-router-dom";
 
 
 export default function Header(props) {
+
+    const headerstyle = {
+        fontSize: 40,
+        fontFamily: "Ubuntu",
+        fontWeight: 'bold'
+      };
+
+    const navstyle = {
+        paddingLeft: 18,
+        paddingRight: 18,
+        fontFamily: "Montserrat-Light",
+        fontSize: 19
+    };
+
+    const mar={
+        marginLeft: 800
+    }
+
     return (
         <div className="header">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand mb-0 h1" to="/"><i class="fas fa-list-alt"></i>{props.title}</Link>          {/* Example to use props */}
+                    <Link className="navbar-brand mb-0 h1" to="/" style={headerstyle}><i className="fas fa-list-alt"></i>{props.title}</Link>          {/* Example to use props */}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={mar}>
+                            <li className="nav-item" style={navstyle}>
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" style={navstyle}>
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
                         </ul>
-                        { props.SearchBar? <form className="d-flex">                           {/* Example to use props */}
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>: "Nothing is Here Bro" }
                     </div>
                 </div>
             </nav>
