@@ -19,7 +19,8 @@ export default function Header(props) {
     };
 
     const mar={
-        marginLeft: 800
+        marginLeft: 90,
+       
     }
 
     return (
