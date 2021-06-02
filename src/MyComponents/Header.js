@@ -19,7 +19,7 @@ export default function Header(props) {
     };
 
     const mar={
-        marginLeft: 90,
+        marginLeft: 130,
        
     }
 
@@ -39,6 +39,9 @@ export default function Header(props) {
                             <li className="nav-item" style={navstyle}>
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
+                            <li className="nav-item" style={navstyle}>
+                                <a  className="nav-link" target="_blank" href="https://www.linkedin.com/in/prabhat-singh-panwar-7b79091ba/">Linked<i className="fab fa-linkedin"></i></a>
+                            </li>                            
                         </ul>
                     </div>
                 </div>
